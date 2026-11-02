@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-glob glob-1"></div>
+    <div class="background-glob glob-2"></div>
+
+    <div class="app-container">
+        <!-- Header & Search -->
+        <header>
+            <div class="logo">
+                <i class="fa-solid fa-cloud-sun"></i>
+                <span>SkyCast</span>
+            </div>
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" id="city-input" placeholder="Search city..." autocomplete="off">
+                <button id="search-btn">Search</button>
+            </div>
+        </header>
+
+        <!-- Main Weather Display -->
+        <main class="weather-body">
+            <div class="current-weather">
+                <div class="city-info">
+                    <h1 id="city-name">Karachi, PK</h1>
+                    <p id="current-date">Monday, 2 Nov 2026</p>
+                    <span id="weather-desc" class="badge">Sunny</span>
+                </div>
+                <div class="temp-display">
+                    <i id="weather-icon" class="fa-solid fa-sun weather-main-icon"></i>
+                    <div class="temp-value">
+                        <span id="temp-val">28</span><span class="unit">°C</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Detailed Stats -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <i class="fa-solid fa-droplet"></i>
+                    <div>
+                        <p class="stat-label">Humidity</p>
+                        <h4 id="humidity">65%</h4>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <i class="fa-solid fa-wind"></i>
+                    <div>
+                        <p class="stat-label">Wind Speed</p>
+                        <h4 id="wind-speed">14 km/h</h4>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <i class="fa-solid fa-gauge-high"></i>
+                    <div>
+                        <p class="stat-label">Pressure</p>
+                        <h4 id="pressure">1012 hPa</h4>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <i class="fa-solid fa-eye"></i>
+                    <div>
+                        <p class="stat-label">Visibility</p>
+                        <h4 id="visibility">10 km</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5-Day Forecast -->
+            <section class="forecast-section">
+                <h3>5-Day Forecast</h3>
+                <div class="forecast-grid" id="forecast-container">
+                    <!-- Forecast items will be injected via JS -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
